@@ -266,7 +266,7 @@ func (h *HashID) EncodeBigInt(numbers []*big.Int) (string, error) {
 		if i+1 < len(numbers) {
 			sepIdx := big.NewInt(0)
 			sepIdx.Rem(n, big.NewInt(int64(hashBuf[0]) + int64(i)))
-			sepIdx.Rem(n, big.NewInt(int64(len(h.seps))))
+			sepIdx.Rem(sepIdx, big.NewInt(int64(len(h.seps))))
 			result = append(result, h.seps[sepIdx.Int64()])
 		}
 	}

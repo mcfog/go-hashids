@@ -47,7 +47,7 @@ func TestBigEncodeWithKnownHash(t *testing.T) {
 
 	t.Logf("%v -> %v", numbers, hash)
 
-	if hash != "1ZZhw9wwZE8aj5LByEUWNipkHK2loxbgn38bK" {
+	if hash != "1ZZhw9wwZE8aj5LByEFWNipkHK2loxbgn38bK" {
 		t.Error("hash does not match expected one")
 	}
 }
@@ -59,7 +59,7 @@ func TestBigDecodeWithKnownHash(t *testing.T) {
 
 	hid, _ := NewWithData(hdata)
 
-	hash := "1ZZhw9wwZE8aj5LByEUWNipkHK2loxbgn38bK"
+	hash := "1ZZhw9wwZE8aj5LByEFWNipkHK2loxbgn38bK"
 	numbers, err := hid.DecodeBigInt(hash)
 	if err != nil {
 		t.Fatal(err)
